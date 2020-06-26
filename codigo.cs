@@ -1,3 +1,11 @@
+           using System;
+
+namespace Pactica
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
             int y1, y2;
             string linea;
             Console.WriteLine("precio del producto:");
@@ -45,3 +53,6 @@
 
             }
             Console.ReadKey();
+        }
+    }
+}
