@@ -1,0 +1,47 @@
+            int y1, y2;
+            string linea;
+            Console.WriteLine("precio del producto:");
+            y1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("desea pagar con efectivo = 1 o targeta = 2?");
+            linea = Console.ReadLine();
+            y2 = Convert.ToInt32(linea);
+            switch (y2)
+        {
+            case 1:
+            Console.WriteLine("Efectivo");
+            Console.ReadLine();
+            Console.WriteLine("Pago realizado, gracias por su compra");
+            Console.ReadLine();
+            Console.WriteLine("Pase un buen dia!");
+            break;
+            
+            case 2:
+                String y3;
+                Console.WriteLine("targeta.");
+                Console.WriteLine("digite su numero de targeta: "); 
+                y3 = Console.ReadLine();
+
+            if (y3.Length == 16)
+            {
+                    Console.WriteLine("targeta aceptada!");
+                    Console.ReadLine();
+                    Console.WriteLine("pago realizado, gracias por su compra");
+                    Console.ReadLine();
+                    Console.WriteLine("Pase un buen dia!");
+                    Console.ReadLine();
+            }
+            else
+            {
+                    Console.WriteLine("targeta rechazada");
+                    Console.ReadLine();
+                    Console.WriteLine("vuelva a intentarlo.");
+                    Console.ReadLine();
+            }
+            break;
+            
+            
+            
+
+
+            }
+            Console.ReadKey();
