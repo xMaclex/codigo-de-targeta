@@ -1,4 +1,4 @@
-           using System;
+using System;
 
 namespace Pactica
 {
@@ -6,53 +6,50 @@ namespace Pactica
     {
         static void Main(string[] args)
         {
-            int y1, y2;
-            string linea;
-            Console.WriteLine("precio del producto:");
-            y1 = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("desea pagar con efectivo = 1 o targeta = 2?");
-            linea = Console.ReadLine();
-            y2 = Convert.ToInt32(linea);
-            switch (y2)
+            Console.WriteLine("Precio del producto:");
+            int precio = Int32.Parse(Console.ReadLine());
+            Console.WriteLine("Desea pagar con efectivo = 1 o tarjeta = 2?");
+            int metodoPago = Int32.Parse(Console.ReadLine());
+            switch (metodoPago)
         {
             case 1:
-            Console.WriteLine("Efectivo");
-            Console.ReadLine();
-            Console.WriteLine("Pago realizado, gracias por su compra");
-            Console.ReadLine();
-            Console.WriteLine("Pase un buen dia!");
-            break;
-            
-            case 2:
-                String y3;
-                Console.WriteLine("targeta.");
-                Console.WriteLine("digite su numero de targeta: "); 
-                y3 = Console.ReadLine();
+            Console.WriteLine("Efectivo.\n");
+            Console.WriteLine("Pago realizado, gracias por su compra.\n");
 
-            if (y3.Length == 16)
+            break;
+
+            case 2:
+
+                Console.WriteLine("Targeta.");
+                Console.WriteLine("Digite su numero de tarjeta: "); 
+                String numeroTarjeta  = Console.ReadLine();
+
+            if (numeroTarjeta.Length == 16)
             {
-                    Console.WriteLine("targeta aceptada!");
-                    Console.ReadLine();
-                    Console.WriteLine("pago realizado, gracias por su compra");
-                    Console.ReadLine();
-                    Console.WriteLine("Pase un buen dia!");
-                    Console.ReadLine();
+                    Console.WriteLine("Tarjeta aceptada!\n");                  
+                    Console.WriteLine("Pago realizado, gracias por su compra.\n");
             }
             else
             {
-                    Console.WriteLine("targeta rechazada");
-                    Console.ReadLine();
-                    Console.WriteLine("vuelva a intentarlo.");
-                    Console.ReadLine();
+                    Console.WriteLine("Targeta rechazada\n");
+                    Console.WriteLine("Vuelva a intentarlo.\n");
+                    Console.WriteLine("Digite su numero de tarjeta:");
+                    numeroTarjeta = Console.ReadLine();
+            
+            if (numeroTarjeta.Length == 16)
+            {
+                    Console.WriteLine("Tarjeta aceptada!\n");                  
+                    Console.WriteLine("Pago realizado, gracias por su compra.\n");
+            }
+            else
+            {
+                    Console.WriteLine("Tarjeta rechazada\n");
+                    Console.WriteLine("vuelva a intentarlo mas tarde o llame a su aseguradora de tarjeta\n");
+            }
             }
             break;
-            
-            
-            
-
-
             }
-            Console.ReadKey();
+            Console.WriteLine("Pase un buen dia!");
         }
     }
 }
